@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
+  <!-- Fundo circular -->
+  <circle cx="50" cy="50" r="50" fill="#e1e8ed"/>
+  
+  <!-- Cabeça -->
+  <circle cx="50" cy="40" r="25" fill="#f5cba7"/>
+  
+  <!-- Cabelo -->
+  <path d="M25 35 Q30 15 50 15 Q70 15 75 35 Q76 45 70 50 L30 50 Q24 45 25 35" fill="#8e44ad"/>
+  <path d="M30 20 Q40 10 60 15 Q65 18 70 25" fill="#8e44ad"/>
+  
+  <!-- Olhos -->
+  <circle cx="40" cy="35" r="3" fill="#2c3e50"/>
+  <circle cx="60" cy="35" r="3" fill="#2c3e50"/>
+  
+  <!-- Sobrancelhas -->
+  <path d="M35 30 Q40 28 45 30" stroke="#2c3e50" stroke-width="1.5" fill="none"/>
+  <path d="M55 30 Q60 28 65 30" stroke="#2c3e50" stroke-width="1.5" fill="none"/>
+  
+  <!-- Nariz -->
+  <path d="M50 38 L48 45 L52 45" fill="#e59866"/>
+  
+  <!-- Boca -->
+  <path d="M40 52 Q50 58 60 52" stroke="#c0392b" stroke-width="2" fill="none"/>
+  
+  <!-- Pescoço -->
+  <rect x="45" y="65" width="10" height="10" fill="#f5cba7"/>
+  
+  <!-- Corpo/Blusa -->
+  <path d="M30 100 L45 75 L55 75 L70 100" fill="#e74c3c"/>
+  
+  <!-- Detalhe da blusa -->
+  <path d="M45 75 L40 85 L60 85 L55 75" fill="#c0392b"/>
+  
+  <!-- Colar -->
+  <path d="M48 75 L50 85 L52 75" stroke="#f1c40f" stroke-width="2" fill="none"/>
+  <circle cx="50" cy="85" r="2" fill="#f1c40f"/>
+  
+  <!-- Brincos -->
+  <circle cx="30" cy="40" r="2" fill="#f1c40f"/>
+  <circle cx="70" cy="40" r="2" fill="#f1c40f"/>
+</svg>
