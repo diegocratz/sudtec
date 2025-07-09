@@ -1,0 +1,50 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="40" cy="40" r="40" fill="#FF9800"/>
+  
+  <!-- Person silhouette - Tech enthusiast -->
+  <g transform="translate(40, 40)">
+    <!-- Head -->
+    <circle cx="0" cy="-8" r="12" fill="#6D4C41"/>
+    
+    <!-- Hair - casual style -->
+    <path d="M -10 -18 Q -5 -22 0 -20 Q 5 -22 10 -18 Q 8 -12 5 -8 Q 0 -18 -5 -8 Q -8 -12 -10 -18" fill="#3E2723"/>
+    
+    <!-- Body -->
+    <rect x="-8" y="4" width="16" height="20" rx="3" fill="#455A64"/>
+    
+    <!-- Tech tools in hands -->
+    <rect x="-15" y="8" width="6" height="2" rx="1" fill="#FFC107"/> <!-- Screwdriver -->
+    <circle cx="15" cy="10" r="3" fill="#607D8B"/> <!-- Wrench -->
+    
+    <!-- PC components around -->
+    <rect x="-12" y="18" width="8" height="6" rx="1" fill="#4CAF50"/> <!-- Circuit board -->
+    <rect x="4" y="18" width="8" height="6" rx="1" fill="#2196F3"/> <!-- RAM -->
+    
+    <!-- Face details -->
+    <circle cx="-3" cy="-8" r="1" fill="#FFFFFF"/>
+    <circle cx="3" cy="-8" r="1" fill="#FFFFFF"/>
+    <path d="M -2 -4 Q 0 -2 2 -4" stroke="#FFFFFF" stroke-width="1" fill="none"/>
+    
+    <!-- Beard -->
+    <path d="M -4 -2 Q 0 2 4 -2 Q 2 4 0 4 Q -2 4 -4 -2" fill="#3E2723"/>
+  </g>
+  
+  <!-- Tech repair elements -->
+  <g opacity="0.3">
+    <!-- Circuit patterns -->
+    <rect x="15" y="20" width="4" height="4" fill="#4CAF50"/>
+    <line x1="19" y1="22" x2="25" y2="22" stroke="#4CAF50" stroke-width="1"/>
+    <circle cx="25" cy="22" r="2" fill="#4CAF50"/>
+    
+    <!-- Tools -->
+    <rect x="60" y="15" width="2" height="10" fill="#FFC107"/>
+    <circle cx="61" cy="13" r="2" fill="#FF5722"/>
+    
+    <!-- Motherboard pattern -->
+    <rect x="10" y="60" width="12" height="8" fill="#2E7D32"/>
+    <circle cx="13" cy="62" r="1" fill="#FFEB3B"/>
+    <circle cx="16" cy="62" r="1" fill="#FFEB3B"/>
+    <circle cx="19" cy="62" r="1" fill="#FFEB3B"/>
+  </g>
+</svg>

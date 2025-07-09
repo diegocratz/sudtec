@@ -1,0 +1,45 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="40" cy="40" r="40" fill="#fff0f5"/>
+  
+  <!-- Face -->
+  <circle cx="40" cy="35" r="18" fill="#fdbcb4"/>
+  
+  <!-- Hair -->
+  <path d="M22 28 C22 18, 30 14, 40 14 C50 14, 58 18, 58 28 C58 26, 56 24, 54 23 C52 22, 48 21, 44 21 C40 21, 36 21, 32 22 C28 23, 26 24, 24 26 C22 26, 22 27, 22 28 Z" fill="#d2691e"/>
+  
+  <!-- Eyes -->
+  <circle cx="34" cy="32" r="2" fill="#333"/>
+  <circle cx="46" cy="32" r="2" fill="#333"/>
+  <circle cx="34.5" cy="31.5" r="0.5" fill="#fff"/>
+  <circle cx="46.5" cy="31.5" r="0.5" fill="#fff"/>
+  
+  <!-- Eyelashes -->
+  <path d="M32 29 L33 28" stroke="#333" stroke-width="0.5"/>
+  <path d="M35 29 L36 28" stroke="#333" stroke-width="0.5"/>
+  <path d="M44 28 L45 29" stroke="#333" stroke-width="0.5"/>
+  <path d="M47 28 L48 29" stroke="#333" stroke-width="0.5"/>
+  
+  <!-- Nose -->
+  <ellipse cx="40" cy="36" rx="1" ry="1.5" fill="#f4a688"/>
+  
+  <!-- Mouth -->
+  <path d="M36 40 Q40 43 44 40" stroke="#333" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  
+  <!-- Body -->
+  <rect x="28" y="50" width="24" height="25" rx="3" fill="#ff69b4"/>
+  
+  <!-- Arms -->
+  <rect x="20" y="52" width="8" height="18" rx="4" fill="#fdbcb4"/>
+  <rect x="52" y="52" width="8" height="18" rx="4" fill="#fdbcb4"/>
+  
+  <!-- Phone/Mobile device -->
+  <rect x="32" y="58" width="8" height="12" rx="1" fill="#333"/>
+  <rect x="33" y="59" width="6" height="9" rx="0.5" fill="#4a90e2"/>
+  <circle cx="36" cy="64" r="0.5" fill="#fff"/>
+  
+  <!-- Shopping bag -->
+  <rect x="44" y="60" width="6" height="8" rx="1" fill="#ff1493"/>
+  <path d="M45 60 C45 58, 47 58, 47 60" stroke="#ff1493" stroke-width="1" fill="none"/>
+  <path d="M47 60 C47 58, 49 58, 49 60" stroke="#ff1493" stroke-width="1" fill="none"/>
+</svg>

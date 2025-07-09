@@ -1,0 +1,513 @@
+/* Animações para o site TechRepair */
+
+/* Animações de Entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-5px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(5px);
+    }
+}
+
+/* Aplicando animações aos elementos */
+
+/* Header e navegação */
+.logo h1 {
+    animation: fadeInLeft 0.8s ease-out;
+}
+
+.nav ul li {
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.nav ul li:nth-child(1) { animation-delay: 0.1s; }
+.nav ul li:nth-child(2) { animation-delay: 0.2s; }
+.nav ul li:nth-child(3) { animation-delay: 0.3s; }
+.nav ul li:nth-child(4) { animation-delay: 0.4s; }
+.nav ul li:nth-child(5) { animation-delay: 0.5s; }
+.nav ul li:nth-child(6) { animation-delay: 0.6s; }
+
+/* Hero Section */
+.hero-content h2 {
+    opacity: 0;
+    animation: fadeInLeft 0.8s ease-out 0.3s forwards;
+}
+
+.hero-content p {
+    opacity: 0;
+    animation: fadeInLeft 0.8s ease-out 0.5s forwards;
+}
+
+.hero-buttons {
+    opacity: 0;
+    animation: fadeInLeft 0.8s ease-out 0.7s forwards;
+}
+
+.hero-image img {
+    opacity: 0;
+    animation: fadeInRight 0.8s ease-out 0.5s forwards;
+}
+
+/* Serviços */
+.service-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.service-card.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.service-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+}
+
+.service-icon {
+    transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: rotate(360deg) scale(1.1);
+}
+
+/* Por que nos escolher */
+.feature {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
+}
+
+.feature.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.feature:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+    transition: all 0.5s ease;
+}
+
+.feature:hover .feature-icon {
+    background-color: var(--primary-color);
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Sobre nós */
+.about-text {
+    opacity: 0;
+    animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.about-image {
+    opacity: 0;
+    animation: fadeInRight 0.8s ease-out forwards;
+}
+
+.stat-number {
+    display: inline-block;
+    animation: pulse 2s infinite;
+}
+
+/* Monte seu PC */
+.pc-category {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.pc-category:nth-child(1) { animation-delay: 0.1s; }
+.pc-category:nth-child(2) { animation-delay: 0.3s; }
+.pc-category:nth-child(3) { animation-delay: 0.5s; }
+
+.pc-category:hover {
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+.pc-category .category-image img {
+    transition: transform 0.5s ease;
+}
+
+.pc-category:hover .category-image img {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.feature-item {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.feature-item:nth-child(1) { animation-delay: 0.2s; }
+.feature-item:nth-child(2) { animation-delay: 0.4s; }
+.feature-item:nth-child(3) { animation-delay: 0.6s; }
+.feature-item:nth-child(4) { animation-delay: 0.8s; }
+
+.feature-item:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.feature-item i {
+    transition: transform 0.5s ease;
+}
+
+.feature-item:hover i {
+    transform: scale(1.2) rotate(10deg);
+}
+
+/* Depoimentos */
+.testimonial {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
+}
+
+.testimonial.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.testimonial:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.author-image {
+    transition: transform 0.5s ease, border-color 0.3s ease;
+}
+
+.testimonial:hover .author-image {
+    transform: scale(1.1);
+    border-color: var(--accent-color);
+}
+
+.rating i {
+    opacity: 0;
+    animation: fadeInRight 0.4s ease-out forwards;
+}
+
+.rating i:nth-child(1) { animation-delay: 0.1s; }
+.rating i:nth-child(2) { animation-delay: 0.2s; }
+.rating i:nth-child(3) { animation-delay: 0.3s; }
+.rating i:nth-child(4) { animation-delay: 0.4s; }
+.rating i:nth-child(5) { animation-delay: 0.5s; }
+
+/* CTA */
+.cta {
+    position: relative;
+    overflow: hidden;
+}
+
+.cta::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    animation: pulse 4s infinite;
+}
+
+.cta::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    animation: pulse 4s infinite 2s;
+}
+
+.cta h2 {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.cta p {
+    animation: fadeInUp 0.8s ease-out 0.2s;
+}
+
+.cta .btn {
+    animation: fadeInUp 0.8s ease-out 0.4s;
+}
+
+/* Contato */
+.contact-item {
+    opacity: 0;
+    animation: fadeInLeft 0.6s ease-out forwards;
+}
+
+.contact-item:nth-child(1) { animation-delay: 0.1s; }
+.contact-item:nth-child(2) { animation-delay: 0.2s; }
+.contact-item:nth-child(3) { animation-delay: 0.3s; }
+.contact-item:nth-child(4) { animation-delay: 0.4s; }
+
+.contact-icon {
+    transition: transform 0.5s ease, background-color 0.3s ease;
+}
+
+.contact-item:hover .contact-icon {
+    transform: scale(1.1) rotate(10deg);
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.social-icons a {
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.social-icons a:nth-child(1) { animation-delay: 0.1s; }
+.social-icons a:nth-child(2) { animation-delay: 0.2s; }
+.social-icons a:nth-child(3) { animation-delay: 0.3s; }
+.social-icons a:nth-child(4) { animation-delay: 0.4s; }
+
+.form-group {
+    opacity: 0;
+    animation: fadeInRight 0.6s ease-out forwards;
+}
+
+.form-group:nth-child(1) { animation-delay: 0.1s; }
+.form-group:nth-child(2) { animation-delay: 0.2s; }
+.form-group:nth-child(3) { animation-delay: 0.3s; }
+.form-group:nth-child(4) { animation-delay: 0.4s; }
+.form-group:nth-child(5) { animation-delay: 0.5s; }
+
+.contact-form button {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out 0.6s forwards;
+}
+
+/* FAQ */
+.faq-item {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+    transition: transform 0.3s ease;
+}
+
+.faq-item:nth-child(1) { animation-delay: 0.1s; }
+.faq-item:nth-child(2) { animation-delay: 0.2s; }
+.faq-item:nth-child(3) { animation-delay: 0.3s; }
+.faq-item:nth-child(4) { animation-delay: 0.4s; }
+.faq-item:nth-child(5) { animation-delay: 0.5s; }
+
+.faq-item:hover {
+    transform: translateX(5px);
+}
+
+.faq-question {
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: rgba(0, 102, 204, 0.05);
+}
+
+.faq-icon i {
+    transition: transform 0.3s ease;
+}
+
+.faq-question.active .faq-icon i {
+    transform: rotate(180deg);
+    color: var(--accent-color);
+}
+
+/* Footer */
+.footer-content > div {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.footer-content > div:nth-child(1) { animation-delay: 0.1s; }
+.footer-content > div:nth-child(2) { animation-delay: 0.2s; }
+.footer-content > div:nth-child(3) { animation-delay: 0.3s; }
+.footer-content > div:nth-child(4) { animation-delay: 0.4s; }
+
+/* WhatsApp Float Button */
+.whatsapp-float {
+    animation: bounce 2s infinite;
+}
+
+@keyframes pulse-white {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+/* Botões */
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+.btn:hover::after {
+    animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+    20% {
+        transform: scale(25, 25);
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(40, 40);
+    }
+}
+
+/* Animação para seções ao entrar na viewport */
+.section-header h2 {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.section-header p {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.2s forwards;
+}
+
+/* Animação para imagens */
+img {
+    transition: transform 0.5s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Animação para ícones */
+.fas, .fab {
+    transition: transform 0.3s ease;
+}
+
+a:hover .fas, a:hover .fab {
+    transform: scale(1.2);
+}
+
+/* Animação para links do menu */
+.nav ul li a::after {
+    transition: width 0.3s ease;
+}
+
+/* Animação para inputs do formulário */
+input:focus, textarea:focus, select:focus {
+    animation: shake 0.5s ease-in-out;
+}

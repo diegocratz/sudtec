@@ -1,5 +1,5 @@
 {
-  "name": "techrepair-landing",
+  "name": "Sudtec-landing",
   "version": "1.0.0",
   "description": "Landing page para empresa de reparo de computadores com funcionalidade de envio de email",
   "main": "server.js",
@@ -15,7 +15,7 @@
     "email",
     "contact-form"
   ],
-  "author": "TechRepair",
+  "author": "Sudtec",
   "license": "MIT",
   "dependencies": {
     "express": "^4.18.2",

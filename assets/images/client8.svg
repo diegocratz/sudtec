@@ -1,0 +1,42 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="40" cy="40" r="40" fill="#f0f8ff"/>
+  
+  <!-- Face -->
+  <circle cx="40" cy="35" r="18" fill="#fdbcb4"/>
+  
+  <!-- Hair -->
+  <path d="M22 30 C22 20, 30 16, 40 16 C50 16, 58 20, 58 30 C58 28, 56 25, 52 24 C48 23, 44 23, 40 23 C36 23, 32 23, 28 24 C24 25, 22 28, 22 30 Z" fill="#2c1810"/>
+  
+  <!-- Eyes -->
+  <circle cx="34" cy="32" r="2" fill="#333"/>
+  <circle cx="46" cy="32" r="2" fill="#333"/>
+  <circle cx="34.5" cy="31.5" r="0.5" fill="#fff"/>
+  <circle cx="46.5" cy="31.5" r="0.5" fill="#fff"/>
+  
+  <!-- Glasses -->
+  <circle cx="34" cy="32" r="6" fill="none" stroke="#333" stroke-width="1.5"/>
+  <circle cx="46" cy="32" r="6" fill="none" stroke="#333" stroke-width="1.5"/>
+  <line x1="40" y1="32" x2="40" y2="32" stroke="#333" stroke-width="1.5"/>
+  
+  <!-- Nose -->
+  <ellipse cx="40" cy="36" rx="1" ry="1.5" fill="#f4a688"/>
+  
+  <!-- Mouth -->
+  <path d="M36 40 Q40 43 44 40" stroke="#333" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  
+  <!-- Body -->
+  <rect x="28" y="50" width="24" height="25" rx="3" fill="#2c5530"/>
+  
+  <!-- Arms -->
+  <rect x="20" y="52" width="8" height="18" rx="4" fill="#fdbcb4"/>
+  <rect x="52" y="52" width="8" height="18" rx="4" fill="#fdbcb4"/>
+  
+  <!-- Tools/Wrench -->
+  <rect x="22" y="60" width="4" height="1" rx="0.5" fill="#666" transform="rotate(45 24 60.5)"/>
+  <circle cx="24" cy="58" r="1.5" fill="#666"/>
+  
+  <!-- Screwdriver -->
+  <rect x="54" y="58" width="1" height="8" fill="#ff6b35"/>
+  <rect x="53.5" y="58" width="2" height="2" fill="#333"/>
+</svg>

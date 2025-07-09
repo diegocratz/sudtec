@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Fundo circular -->
+  <circle cx="100" cy="100" r="100" fill="#e0e0e0"/>
+  
+  <!-- Cabeça -->
+  <circle cx="100" cy="80" r="40" fill="#f5d0a9"/>
+  
+  <!-- Cabelo -->
+  <path d="M60 80 Q100 10 140 80" fill="#6b4226"/>
+  <path d="M60 80 Q70 40 100 40 Q130 40 140 80" fill="#6b4226"/>
+  <path d="M60 80 Q70 100 100 100 Q130 100 140 80" fill="#6b4226"/>
+  
+  <!-- Olhos -->
+  <circle cx="85" cy="75" r="5" fill="#333"/>
+  <circle cx="115" cy="75" r="5" fill="#333"/>
+  
+  <!-- Sobrancelhas -->
+  <path d="M80 65 Q85 60 90 65" stroke="#333" stroke-width="2" fill="none"/>
+  <path d="M110 65 Q115 60 120 65" stroke="#333" stroke-width="2" fill="none"/>
+  
+  <!-- Nariz -->
+  <path d="M100 80 L103 90 L100 90" fill="#e0ac8c"/>
+  
+  <!-- Boca -->
+  <path d="M90 100 Q100 105 110 100" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M90 100 Q100 105 110 100" fill="#e74c3c" fill-opacity="0.5"/>
+  
+  <!-- Roupa -->
+  <path d="M60 120 L60 200 L140 200 L140 120" fill="#3498db"/>
+  
+  <!-- Colar -->
+  <path d="M90 120 Q100 130 110 120" stroke="#f1c40f" stroke-width="3" fill="none"/>
+  <circle cx="100" cy="125" r="3" fill="#f1c40f"/>
+  
+  <!-- Pescoço -->
+  <path d="M85 110 L115 110 L115 120 L85 120 Z" fill="#f5d0a9"/>
+  
+  <!-- Brincos -->
+  <circle cx="65" cy="85" r="3" fill="#f1c40f"/>
+  <circle cx="135" cy="85" r="3" fill="#f1c40f"/>
+</svg>

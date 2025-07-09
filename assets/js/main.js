@@ -1,4 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Preloader
+    setTimeout(function() {
+        const preloader = document.querySelector('.preloader');
+        preloader.classList.add('fade-out');
+        
+        // Habilitar scroll após o preloader desaparecer
+        setTimeout(function() {
+            document.body.style.overflow = 'auto';
+            preloader.style.display = 'none';
+        }, 500);
+    }, 1500); // Tempo de exibição do preloader (1.5 segundos)
+    
+    // Atualizar o ano atual no rodapé
+    const currentYearElement = document.getElementById('current-year');
+    if (currentYearElement) {
+        currentYearElement.textContent = new Date().getFullYear();
+    }
     // Variáveis
     const header = document.querySelector('.header');
     const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
@@ -14,6 +31,35 @@ document.addEventListener('DOMContentLoaded', function() {
             header.classList.remove('scrolled');
         }
     });
+    
+    // Adicionar efeito de hover para o botão de WhatsApp
+    const whatsappButton = document.querySelector('.whatsapp-float');
+    if (whatsappButton) {
+        whatsappButton.addEventListener('mouseenter', function() {
+            this.style.animation = 'pulse 1s infinite';
+        });
+        
+        whatsappButton.addEventListener('mouseleave', function() {
+            this.style.animation = 'bounce 2s infinite';
+        });
+        
+        // Garantir que o botão permaneça no canto direito durante a rolagem
+        function fixWhatsappPosition() {
+            whatsappButton.style.right = '30px';
+            whatsappButton.style.left = 'auto';
+            whatsappButton.style.position = 'fixed';
+            whatsappButton.style.bottom = '30px';
+        }
+        
+        // Aplicar posicionamento imediatamente
+        fixWhatsappPosition();
+        
+        // Aplicar posicionamento durante a rolagem
+        window.addEventListener('scroll', fixWhatsappPosition);
+        
+        // Aplicar posicionamento quando a janela for redimensionada
+        window.addEventListener('resize', fixWhatsappPosition);
+    }
     
     // Menu Mobile
     if (mobileMenuIcon) {
@@ -223,7 +269,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Animação de entrada para elementos quando ficam visíveis
     const animateOnScroll = function() {
-        const elements = document.querySelectorAll('.service-card, .feature, .testimonial, .about-content, .contact-content');
+        const elements = document.querySelectorAll(
+            '.service-card, .feature, .testimonial, .about-content, .contact-content, ' +
+            '.pc-category, .feature-item, .faq-item, .contact-item, .form-group, ' +
+            '.footer-content > div, .section-header h2, .section-header p'
+        );
         
         elements.forEach(element => {
             const elementPosition = element.getBoundingClientRect().top;
@@ -232,6 +282,12 @@ document.addEventListener('DOMContentLoaded', function() {
             if (elementPosition < windowHeight - 100) {
                 element.classList.add('animate');
             }
+        });
+        
+        // Animação para elementos que já estão visíveis no carregamento inicial
+        const heroElements = document.querySelectorAll('.hero-content h2, .hero-content p, .hero-buttons, .hero-image img');
+        heroElements.forEach(element => {
+            element.style.opacity = '1';
         });
     };
     
@@ -458,4 +514,131 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     
     initTestimonialsSlider();
+    
+    // Inicializar carrossel de slides
+    const initHeroCarousel = function() {
+        const slides = document.querySelectorAll('.slide');
+        const indicators = document.querySelectorAll('.indicator');
+        let currentSlide = 0;
+        let slideInterval;
+        
+        if (slides.length === 0) return;
+        
+        // Função para mostrar slide específico
+        function showSlide(index) {
+            // Remover classe active de todos os slides e indicadores
+            slides.forEach(slide => slide.classList.remove('active', 'prev'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            
+            // Adicionar classe active ao slide e indicador atual
+            slides[index].classList.add('active');
+            indicators[index].classList.add('active');
+            
+            currentSlide = index;
+        }
+        
+        // Função para próximo slide
+        function nextSlide() {
+            const next = (currentSlide + 1) % slides.length;
+            showSlide(next);
+        }
+        
+        // Função para slide anterior
+        function prevSlide() {
+            const prev = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(prev);
+        }
+        
+        // Função para iniciar auto-play
+        function startAutoPlay() {
+            slideInterval = setInterval(nextSlide, 5000); // Troca a cada 5 segundos
+        }
+        
+        // Função para parar auto-play
+        function stopAutoPlay() {
+            clearInterval(slideInterval);
+        }
+        
+        // Event listeners para controles de navegação
+        window.changeSlide = function(direction) {
+            stopAutoPlay();
+            if (direction === 1) {
+                nextSlide();
+            } else {
+                prevSlide();
+            }
+            // Reiniciar auto-play após 3 segundos
+            setTimeout(startAutoPlay, 3000);
+        };
+        
+        // Event listener para indicadores
+        window.currentSlide = function(index) {
+            stopAutoPlay();
+            showSlide(index - 1); // index começa em 1, mas array começa em 0
+            // Reiniciar auto-play após 3 segundos
+            setTimeout(startAutoPlay, 3000);
+        };
+        
+        // Pausar auto-play quando mouse estiver sobre o carrossel
+        const carousel = document.querySelector('.hero-carousel');
+        if (carousel) {
+            carousel.addEventListener('mouseenter', stopAutoPlay);
+            carousel.addEventListener('mouseleave', startAutoPlay);
+        }
+        
+        // Controle por teclado
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft') {
+                changeSlide(-1);
+            } else if (e.key === 'ArrowRight') {
+                changeSlide(1);
+            }
+        });
+        
+        // Suporte para touch/swipe em dispositivos móveis
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        carousel.addEventListener('touchstart', function(e) {
+            touchStartX = e.changedTouches[0].screenX;
+            stopAutoPlay();
+        });
+        
+        carousel.addEventListener('touchend', function(e) {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+            // Reiniciar auto-play após 3 segundos
+            setTimeout(startAutoPlay, 3000);
+        });
+        
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+            
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    // Swipe left - próximo slide
+                    nextSlide();
+                } else {
+                    // Swipe right - slide anterior
+                    prevSlide();
+                }
+            }
+        }
+        
+        // Inicializar carrossel
+        showSlide(0);
+        startAutoPlay();
+        
+        // Pausar auto-play quando a aba não estiver visível
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                stopAutoPlay();
+            } else {
+                startAutoPlay();
+            }
+        });
+    };
+    
+    initHeroCarousel();
 });

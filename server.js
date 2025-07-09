@@ -52,7 +52,7 @@ app.post('/send-email', async (req, res) => {
         // Configuração do email
         const mailOptions = {
             from: process.env.EMAIL_USER || 'seu-email@gmail.com',
-            to: process.env.CONTACT_EMAIL || 'contato@techrepair.com.br',
+            to: process.env.CONTACT_EMAIL || 'contato@Sudtec.com.br',
             subject: `Novo contato - ${service}`,
             html: `
                 <h2>Novo contato recebido pelo site</h2>
@@ -63,7 +63,7 @@ app.post('/send-email', async (req, res) => {
                 <p><strong>Mensagem:</strong></p>
                 <p>${message.replace(/\n/g, '<br>')}</p>
                 <hr>
-                <p><em>Enviado através do formulário de contato do site TechRepair</em></p>
+                <p><em>Enviado através do formulário de contato do site Sudtec</em></p>
             `
         };
         
@@ -71,7 +71,7 @@ app.post('/send-email', async (req, res) => {
         const confirmationMailOptions = {
             from: process.env.EMAIL_USER || 'seu-email@gmail.com',
             to: email,
-            subject: 'Confirmação de contato - TechRepair',
+            subject: 'Confirmação de contato - Sudtec',
             html: `
                 <h2>Obrigado pelo seu contato!</h2>
                 <p>Olá ${name},</p>
@@ -82,9 +82,9 @@ app.post('/send-email', async (req, res) => {
                 <p>${message.replace(/\n/g, '<br>')}</p>
                 <hr>
                 <p>Atenciosamente,<br>
-                <strong>Equipe TechRepair</strong><br>
+                <strong>Equipe Sudtec</strong><br>
                 Telefone: (11) 9 9999-9999<br>
-                Email: contato@techrepair.com.br</p>
+                Email: contato@Sudtec.com.br</p>
             `
         };
         

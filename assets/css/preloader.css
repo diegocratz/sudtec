@@ -1,0 +1,137 @@
+/* Preloader e Animação de Entrada */
+body {
+    overflow: hidden; /* Desabilita o scroll durante o carregamento */
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0066cc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.preloader.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    perspective: 800px;
+}
+
+.loader-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-top-color: #ffffff;
+    border-bottom-color: #ffffff;
+    animation: spin 1.5s linear infinite;
+}
+
+.loader-inner:before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-left-color: #ff9900;
+    border-right-color: #ff9900;
+    animation: spin 1s linear infinite reverse;
+}
+
+.loader-inner:after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-top-color: #ffffff;
+    border-bottom-color: #ffffff;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.company-name {
+    position: absolute;
+    top: 30%;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px rgba(255, 153, 0, 0.7);
+    animation: pulse 1.5s infinite;
+}
+
+.loader-text {
+    position: absolute;
+    bottom: -40px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    animation: pulse 1.5s infinite;
+}
+
+/* Animação de entrada para o site inteiro */
+.site-wrapper {
+    opacity: 0;
+    animation: fadeIn 1s ease-out 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animação para o logo durante o preloader */
+.preloader-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: pulse 1.5s infinite;
+}
+
+.preloader-logo img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}

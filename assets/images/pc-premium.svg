@@ -1,0 +1,157 @@
+<svg width="200" height="150" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+  <!-- Premium PC Case - High-end design -->
+  <rect x="40" y="20" width="80" height="100" rx="8" fill="#0D1117" stroke="#21262D" stroke-width="3"/>
+  
+  <!-- Premium tempered glass with tint -->
+  <rect x="45" y="25" width="70" height="90" rx="5" fill="#161B22" opacity="0.9"/>
+  
+  <!-- Advanced RGB lighting system -->
+  <rect x="47" y="27" width="66" height="3" fill="url(#rgbGradient1)"/>
+  <rect x="47" y="109" width="66" height="3" fill="url(#rgbGradient2)"/>
+  <rect x="47" y="27" width="3" height="85" fill="url(#rgbGradient3)"/>
+  <rect x="110" y="27" width="3" height="85" fill="url(#rgbGradient4)"/>
+  
+  <!-- Premium internal components -->
+  <!-- High-end motherboard -->
+  <rect x="50" y="75" width="60" height="35" fill="#1F2937"/>
+  <rect x="52" y="77" width="56" height="31" fill="#374151"/>
+  
+  <!-- Premium CPU Cooler (AIO) -->
+  <circle cx="70" cy="85" r="12" fill="#111827"/>
+  <circle cx="70" cy="85" r="10" fill="#6366F1"/>
+  <circle cx="70" cy="85" r="7" fill="#1F2937"/>
+  <text x="66" y="88" font-family="Arial" font-size="6" fill="#FFFFFF">AIO</text>
+  
+  <!-- High-end RAM (4 sticks) -->
+  <rect x="90" y="78" width="3" height="18" fill="#DC2626"/>
+  <rect x="94" y="78" width="3" height="18" fill="#DC2626"/>
+  <rect x="98" y="78" width="3" height="18" fill="#DC2626"/>
+  <rect x="102" y="78" width="3" height="18" fill="#DC2626"/>
+  <g fill="#FBBF24">
+    <rect x="90" y="77" width="3" height="2"/>
+    <rect x="94" y="77" width="3" height="2"/>
+    <rect x="98" y="77" width="3" height="2"/>
+    <rect x="102" y="77" width="3" height="2"/>
+  </g>
+  
+  <!-- High-end Graphics Card (RTX 4080/4090) -->
+  <rect x="55" y="95" width="45" height="12" fill="#1F2937"/>
+  <rect x="57" y="97" width="41" height="8" fill="#059669"/>
+  <text x="60" y="103" font-family="Arial" font-size="5" fill="#FFFFFF">RTX 4080</text>
+  <rect x="85" y="98" width="12" height="6" fill="#374151"/> <!-- Cooler -->
+  
+  <!-- Premium PSU -->
+  <rect x="50" y="107" width="25" height="8" fill="#374151"/>
+  <text x="52" y="113" font-family="Arial" font-size="4" fill="#FBBF24">850W</text>
+  
+  <!-- Custom water cooling tubes -->
+  <path d="M 70 73 Q 85 70 90 85" stroke="#06B6D4" stroke-width="2" fill="none"/>
+  <path d="M 70 97 Q 55 100 50 85" stroke="#06B6D4" stroke-width="2" fill="none"/>
+  
+  <!-- Premium front panel -->
+  <rect x="42" y="22" width="6" height="96" fill="url(#rgbGradient5)"/>
+  
+  <!-- Premium power button -->
+  <circle cx="80" cy="35" r="5" fill="#111827"/>
+  <circle cx="80" cy="35" r="4" fill="none" stroke="#06B6D4" stroke-width="1.5"/>
+  <circle cx="80" cy="35" r="2" fill="#06B6D4"/>
+  
+  <!-- 4K Gaming monitor -->
+  <rect x="130" y="10" width="75" height="60" rx="4" fill="#0D1117" stroke="#21262D" stroke-width="3"/>
+  <rect x="135" y="15" width="65" height="50" fill="#000"/>
+  
+  <!-- 4K gaming content -->
+  <rect x="140" y="20" width="55" height="40" fill="#1E1B4B"/>
+  <!-- Advanced game graphics -->
+  <polygon points="145,25 155,35 165,25 175,35 185,25 190,30 185,40 175,50 165,40 155,50 145,40 140,30" fill="#7C3AED" opacity="0.8"/>
+  <circle cx="170" cy="35" r="12" fill="#F59E0B" opacity="0.6"/>
+  <circle cx="170" cy="35" r="2" fill="#FFFFFF"/>
+  <!-- 4K indicator -->
+  <text x="175" y="58" font-family="Arial" font-size="6" fill="#06B6D4">4K</text>
+  
+  <!-- Premium monitor stand -->
+  <rect x="162" y="70" width="12" height="25" fill="#374151"/>
+  <rect x="150" y="95" width="36" height="6" rx="3" fill="#4B5563"/>
+  
+  <!-- Premium mechanical keyboard -->
+  <rect x="125" y="105" width="70" height="20" rx="4" fill="#0D1117"/>
+  <rect x="128" y="108" width="64" height="14" rx="2" fill="#1F2937"/>
+  
+  <!-- Premium keycaps with individual RGB -->
+  <g>
+    <rect x="132" y="112" width="5" height="5" rx="1" fill="#DC2626"/>
+    <rect x="139" y="112" width="5" height="5" rx="1" fill="#F59E0B"/>
+    <rect x="146" y="112" width="5" height="5" rx="1" fill="#10B981"/>
+    <rect x="153" y="112" width="5" height="5" rx="1" fill="#3B82F6"/>
+    <rect x="160" y="112" width="5" height="5" rx="1" fill="#8B5CF6"/>
+    <rect x="167" y="112" width="5" height="5" rx="1" fill="#EC4899"/>
+    <rect x="174" y="112" width="5" height="5" rx="1" fill="#06B6D4"/>
+    <rect x="181" y="112" width="5" height="5" rx="1" fill="#84CC16"/>
+  </g>
+  
+  <!-- Premium gaming mouse -->
+  <ellipse cx="200" cy="115" rx="6" ry="10" fill="#0D1117"/>
+  <ellipse cx="200" cy="115" rx="4" ry="8" fill="#7C3AED"/>
+  <circle cx="200" cy="110" r="1.5" fill="#FFFFFF"/>
+  <circle cx="198" cy="113" r="0.8" fill="#06B6D4"/>
+  <circle cx="202" cy="113" r="0.8" fill="#F59E0B"/>
+  
+  <!-- Premium cable management -->
+  <path d="M 120 80 Q 125 85 130 75" stroke="#374151" stroke-width="4" fill="none"/>
+  
+  <!-- Performance indicators -->
+  <g transform="translate(10, 125)">
+    <text x="0" y="0" font-family="Arial" font-size="12" fill="#06B6D4">Premium</text>
+    <text x="0" y="15" font-family="Arial" font-size="8" fill="#10B981">4K • 120+ FPS • Streaming</text>
+  </g>
+  
+  <!-- Premium RGB effect particles -->
+  <g opacity="0.8">
+    <circle cx="20" cy="25" r="3" fill="#DC2626"/>
+    <circle cx="25" cy="40" r="2.5" fill="#F59E0B"/>
+    <circle cx="15" cy="55" r="2" fill="#10B981"/>
+    <circle cx="30" cy="70" r="2.5" fill="#3B82F6"/>
+    <circle cx="20" cy="85" r="2" fill="#8B5CF6"/>
+    <circle cx="25" cy="100" r="2.5" fill="#EC4899"/>
+  </g>
+  
+  <!-- RGB Gradients -->
+  <defs>
+    <linearGradient id="rgbGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#DC2626"/>
+      <stop offset="16.66%" stop-color="#F59E0B"/>
+      <stop offset="33.33%" stop-color="#10B981"/>
+      <stop offset="50%" stop-color="#3B82F6"/>
+      <stop offset="66.66%" stop-color="#8B5CF6"/>
+      <stop offset="83.33%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="rgbGradient2" x1="100%" y1="0%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#DC2626"/>
+      <stop offset="16.66%" stop-color="#F59E0B"/>
+      <stop offset="33.33%" stop-color="#10B981"/>
+      <stop offset="50%" stop-color="#3B82F6"/>
+      <stop offset="66.66%" stop-color="#8B5CF6"/>
+      <stop offset="83.33%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="rgbGradient3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#DC2626"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="rgbGradient4" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#DC2626"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="rgbGradient5" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#DC2626"/>
+      <stop offset="20%" stop-color="#F59E0B"/>
+      <stop offset="40%" stop-color="#10B981"/>
+      <stop offset="60%" stop-color="#3B82F6"/>
+      <stop offset="80%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+  </defs>
+</svg>

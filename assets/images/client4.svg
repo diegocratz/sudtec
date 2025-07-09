@@ -1,0 +1,38 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="40" cy="40" r="40" fill="#4A90E2"/>
+  
+  <!-- Person silhouette - Young gamer -->
+  <g transform="translate(40, 40)">
+    <!-- Head -->
+    <circle cx="0" cy="-8" r="12" fill="#2C3E50"/>
+    
+    <!-- Hair - modern style -->
+    <path d="M -10 -18 Q 0 -22 10 -18 Q 8 -15 6 -12 Q 0 -20 -6 -12 Q -8 -15 -10 -18" fill="#1A252F"/>
+    
+    <!-- Body -->
+    <rect x="-8" y="4" width="16" height="20" rx="3" fill="#34495E"/>
+    
+    <!-- Gaming headset -->
+    <rect x="-14" y="-12" width="4" height="8" rx="2" fill="#E74C3C"/>
+    <rect x="10" y="-12" width="4" height="8" rx="2" fill="#E74C3C"/>
+    <rect x="-12" y="-10" width="24" height="2" fill="#C0392B"/>
+    
+    <!-- Gaming controller in hands -->
+    <ellipse cx="-12" cy="8" rx="4" ry="2" fill="#9B59B6"/>
+    <ellipse cx="12" cy="8" rx="4" ry="2" fill="#9B59B6"/>
+    
+    <!-- Face details -->
+    <circle cx="-3" cy="-8" r="1" fill="#ECF0F1"/>
+    <circle cx="3" cy="-8" r="1" fill="#ECF0F1"/>
+    <path d="M -2 -4 Q 0 -2 2 -4" stroke="#ECF0F1" stroke-width="1" fill="none"/>
+  </g>
+  
+  <!-- Gaming elements -->
+  <g opacity="0.3">
+    <!-- Game icons floating around -->
+    <rect x="15" y="15" width="6" height="6" rx="1" fill="#F39C12" transform="rotate(15)"/>
+    <circle cx="65" cy="25" r="3" fill="#E67E22"/>
+    <polygon points="20,65 25,55 30,65" fill="#27AE60"/>
+  </g>
+</svg>

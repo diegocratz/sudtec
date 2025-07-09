@@ -15,13 +15,13 @@ COPY . .
 
 # Criar usuário não-root para segurança
 RUN addgroup -g 1001 -S nodejs && \
-    adduser -S techrepair -u 1001
+    adduser -S Sudtec -u 1001
 
 # Alterar ownership dos arquivos
-RUN chown -R techrepair:nodejs /app
+RUN chown -R Sudtec:nodejs /app
 
 # Mudar para usuário não-root
-USER techrepair
+USER Sudtec
 
 # Expor porta (ajuste se necessário)
 EXPOSE 3000
