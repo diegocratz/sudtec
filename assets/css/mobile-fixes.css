@@ -176,21 +176,16 @@
         overflow: hidden;
     }
     
-    /* Simplificar carrossel em telas pequenas */
+    /* Ajustes do carrossel em telas pequenas */
     @media screen and (max-width: 480px) {
         .hero-carousel {
             margin-top: 0;
             min-height: 350px;
         }
         
-        /* Mostrar apenas o primeiro slide */
-        .hero-carousel .slide:not(:first-child) {
-            display: none;
-        }
-        
-        /* Ocultar indicadores e controles do carrossel */
+        /* Manter carrossel funcional em mobile */
         .carousel-indicators, .nav-btn.prev, .nav-btn.next {
-            display: none;
+            display: block;
         }
         
         .slide .hero-image {
