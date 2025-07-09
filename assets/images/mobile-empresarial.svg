@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <defs>
+    <linearGradient id="bgGradient5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#34495e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2c3e50;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="buildingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="serverGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#95a5a6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7f8c8d;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="200" fill="url(#bgGradient5)"/>
+  
+  <!-- Office Building -->
+  <g transform="translate(50, 40)">
+    <!-- Main building -->
+    <rect x="0" y="20" width="60" height="80" fill="url(#buildingGradient)"/>
+    
+    <!-- Building windows -->
+    <rect x="8" y="30" width="8" height="8" fill="#f1c40f" opacity="0.8"/>
+    <rect x="20" y="30" width="8" height="8" fill="#f1c40f" opacity="0.8"/>
+    <rect x="32" y="30" width="8" height="8" fill="#f1c40f" opacity="0.8"/>
+    <rect x="44" y="30" width="8" height="8" fill="#f1c40f" opacity="0.8"/>
+    
+    <rect x="8" y="45" width="8" height="8" fill="#f1c40f" opacity="0.8"/>
+    <rect x="20" y="45" width="8" height="8" fill="#f1c40f" opacity="0.8"/>
+    <rect x="32" y="45" width="8" height="8" fill="#f1c40f" opacity="0.8"/>
+    <rect x="44" y="45" width="8" height="8" fill="#f1c40f" opacity="0.8"/>
+    
+    <rect x="8" y="60" width="8" height="8" fill="#f1c40f" opacity="0.8"/>
+    <rect x="20" y="60" width="8" height="8" fill="#f1c40f" opacity="0.8"/>
+    <rect x="32" y="60" width="8" height="8" fill="#f1c40f" opacity="0.8"/>
+    <rect x="44" y="60" width="8" height="8" fill="#f1c40f" opacity="0.8"/>
+    
+    <rect x="8" y="75" width="8" height="8" fill="#f1c40f" opacity="0.8"/>
+    <rect x="20" y="75" width="8" height="8" fill="#f1c40f" opacity="0.8"/>
+    <rect x="32" y="75" width="8" height="8" fill="#f1c40f" opacity="0.8"/>
+    <rect x="44" y="75" width="8" height="8" fill="#f1c40f" opacity="0.8"/>
+    
+    <!-- Building entrance -->
+    <rect x="22" y="85" width="16" height="15" fill="#2c3e50"/>
+    <rect x="26" y="88" width="8" height="12" fill="#34495e"/>
+    
+    <!-- Antenna/Communication tower -->
+    <rect x="28" y="10" width="4" height="15" fill="#e74c3c"/>
+    <circle cx="30" cy="8" r="3" fill="#e74c3c" opacity="0.7"/>
+    <line x1="27" y1="8" x2="33" y2="8" stroke="#e74c3c" stroke-width="1"/>
+    <line x1="25" y1="12" x2="35" y2="12" stroke="#e74c3c" stroke-width="1"/>
+  </g>
+  
+  <!-- Server Rack -->
+  <g transform="translate(150, 60)">
+    <!-- Server cabinet -->
+    <rect x="0" y="0" width="25" height="60" rx="2" fill="url(#serverGradient)"/>
+    <rect x="2" y="2" width="21" height="56" rx="1" fill="#2c3e50"/>
+    
+    <!-- Server units -->
+    <rect x="4" y="5" width="17" height="8" fill="#34495e"/>
+    <rect x="4" y="15" width="17" height="8" fill="#34495e"/>
+    <rect x="4" y="25" width="17" height="8" fill="#34495e"/>
+    <rect x="4" y="35" width="17" height="8" fill="#34495e"/>
+    <rect x="4" y="45" width="17" height="8" fill="#34495e"/>
+    
+    <!-- LED indicators -->
+    <circle cx="6" cy="9" r="1" fill="#27ae60"/>
+    <circle cx="9" cy="9" r="1" fill="#27ae60"/>
+    <circle cx="6" cy="19" r="1" fill="#27ae60"/>
+    <circle cx="9" cy="19" r="1" fill="#e74c3c"/>
+    <circle cx="6" cy="29" r="1" fill="#27ae60"/>
+    <circle cx="9" cy="29" r="1" fill="#27ae60"/>
+    <circle cx="6" cy="39" r="1" fill="#f39c12"/>
+    <circle cx="9" cy="39" r="1" fill="#27ae60"/>
+    <circle cx="6" cy="49" r="1" fill="#27ae60"/>
+    <circle cx="9" cy="49" r="1" fill="#27ae60"/>
+    
+    <!-- Ventilation -->
+    <rect x="15" y="7" width="4" height="1" fill="#7f8c8d"/>
+    <rect x="15" y="9" width="4" height="1" fill="#7f8c8d"/>
+    <rect x="15" y="17" width="4" height="1" fill="#7f8c8d"/>
+    <rect x="15" y="19" width="4" height="1" fill="#7f8c8d"/>
+  </g>
+  
+  <!-- Network/Connectivity -->
+  <g transform="translate(220, 50)">
+    <!-- Router/Switch -->
+    <rect x="0" y="0" width="40" height="15" rx="2" fill="#2c3e50"/>
+    <rect x="2" y="2" width="36" height="11" rx="1" fill="#34495e"/>
+    
+    <!-- Ethernet ports -->
+    <rect x="5" y="5" width="3" height="5" fill="#f39c12"/>
+    <rect x="10" y="5" width="3" height="5" fill="#27ae60"/>
+    <rect x="15" y="5" width="3" height="5" fill="#27ae60"/>
+    <rect x="20" y="5" width="3" height="5" fill="#27ae60"/>
+    <rect x="25" y="5" width="3" height="5" fill="#e74c3c"/>
+    <rect x="30" y="5" width="3" height="5" fill="#27ae60"/>
+    
+    <!-- Status LEDs -->
+    <circle cx="35" cy="4" r="1" fill="#27ae60"/>
+    <circle cx="35" cy="7" r="1" fill="#3498db"/>
+    <circle cx="35" cy="10" r="1" fill="#f39c12"/>
+    
+    <!-- WiFi signals -->
+    <path d="M45 8 Q50 3 55 8" stroke="#3498db" stroke-width="1" fill="none" opacity="0.8"/>
+    <path d="M47 8 Q50 5 53 8" stroke="#3498db" stroke-width="1" fill="none" opacity="0.6"/>
+    <path d="M49 8 Q50 7 51 8" stroke="#3498db" stroke-width="1" fill="none" opacity="0.4"/>
+  </g>
+  
+  <!-- Help Desk/Support -->
+  <g transform="translate(300, 70)">
+    <!-- Headset -->
+    <path d="M10 5 Q15 0 20 5 L20 15 Q20 20 15 20 Q10 20 10 15 Z" fill="#2c3e50"/>
+    <circle cx="8" cy="12" r="4" fill="#34495e"/>
+    <circle cx="22" cy="12" r="4" fill="#34495e"/>
+    <rect x="12" y="18" width="6" height="8" fill="#2c3e50"/>
+    <circle cx="15" cy="26" r="2" fill="#e74c3c"/>
+    
+    <!-- Microphone -->
+    <rect x="14" y="20" width="2" height="6" fill="#7f8c8d"/>
+    <circle cx="15" cy="28" r="1.5" fill="#95a5a6"/>
+  </g>
+  
+  <!-- Contract/Document -->
+  <g transform="translate(80, 130)">
+    <!-- Document -->
+    <rect x="0" y="0" width="30" height="40" rx="2" fill="white"/>
+    <rect x="2" y="2" width="26" height="36" rx="1" fill="#ecf0f1"/>
+    
+    <!-- Document content -->
+    <rect x="5" y="5" width="20" height="2" fill="#3498db"/>
+    <rect x="5" y="9" width="18" height="1" fill="#7f8c8d"/>
+    <rect x="5" y="12" width="20" height="1" fill="#7f8c8d"/>
+    <rect x="5" y="15" width="15" height="1" fill="#7f8c8d"/>
+    <rect x="5" y="18" width="18" height="1" fill="#7f8c8d"/>
+    
+    <!-- Signature line -->
+    <line x1="5" y1="30" x2="25" y2="30" stroke="#7f8c8d" stroke-width="0.5"/>
+    <text x="15" y="35" text-anchor="middle" fill="#7f8c8d" font-family="Arial" font-size="4">Assinatura</text>
+    
+    <!-- Checkmark -->
+    <circle cx="22" cy="25" r="3" fill="#27ae60"/>
+    <path d="M20 25 L21.5 26.5 L24 23.5" stroke="white" stroke-width="1" fill="none"/>
+  </g>
+  
+  <!-- Security Shield -->
+  <g transform="translate(250, 120)">
+    <path d="M15 5 L15 25 Q15 30 20 32 Q25 30 25 25 L25 5 Z" fill="#27ae60"/>
+    <path d="M18 15 L19.5 17 L23 12" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    
+    <!-- Lock icon -->
+    <rect x="17" y="18" width="6" height="8" rx="1" fill="#2c3e50"/>
+    <rect x="19" y="15" width="2" height="3" fill="none" stroke="#2c3e50" stroke-width="1"/>
+    <circle cx="20" cy="22" r="1" fill="#f39c12"/>
+  </g>
+  
+  <!-- Data flow lines -->
+  <g stroke="#3498db" stroke-width="1" fill="none" opacity="0.6">
+    <path d="M110 80 Q130 70 150 80"/>
+    <path d="M175 90 Q200 85 220 90"/>
+    <path d="M260 80 Q280 75 300 85"/>
+  </g>
+  
+  <!-- Floating tech elements -->
+  <circle cx="40" cy="30" r="2" fill="#3498db" opacity="0.7"/>
+  <rect x="350" y="40" width="3" height="3" fill="#27ae60" opacity="0.6" transform="rotate(45 351.5 41.5)"/>
+  <circle cx="320" cy="160" r="2" fill="#f39c12" opacity="0.5"/>
+  <polygon points="30,160 33,165 30,170 27,165" fill="#e74c3c" opacity="0.6"/>
+  
+  <!-- Text -->
+  <text x="200" y="180" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Atendimento Empresarial</text>
+</svg>

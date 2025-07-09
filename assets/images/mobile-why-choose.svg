@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <defs>
+    <linearGradient id="bgGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#27ae60;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2ecc71;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="shieldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="200" fill="url(#bgGradient2)"/>
+  
+  <!-- Shield (Trust/Security) -->
+  <g transform="translate(80, 40)">
+    <path d="M20 10 L20 35 Q20 45 30 50 Q40 45 40 35 L40 10 Z" fill="url(#shieldGradient)"/>
+    <path d="M25 20 L28 25 L35 18" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Trophy (Excellence) -->
+  <g transform="translate(150, 45)">
+    <rect x="0" y="20" width="30" height="4" rx="2" fill="#f39c12"/>
+    <rect x="12" y="24" width="6" height="15" fill="#e67e22"/>
+    <rect x="8" y="39" width="14" height="4" rx="2" fill="#d35400"/>
+    
+    <!-- Trophy cup -->
+    <path d="M5 5 L25 5 Q28 5 28 8 L28 15 Q28 20 23 20 L7 20 Q2 20 2 15 L2 8 Q2 5 5 5 Z" fill="#f1c40f"/>
+    <circle cx="15" cy="12" r="3" fill="#e67e22"/>
+    
+    <!-- Trophy handles -->
+    <path d="M2 10 Q-2 10 -2 13 Q-2 16 2 16" stroke="#f39c12" stroke-width="2" fill="none"/>
+    <path d="M28 10 Q32 10 32 13 Q32 16 28 16" stroke="#f39c12" stroke-width="2" fill="none"/>
+  </g>
+  
+  <!-- Gear (Technical Expertise) -->
+  <g transform="translate(220, 50)">
+    <circle cx="15" cy="15" r="12" fill="#95a5a6"/>
+    <circle cx="15" cy="15" r="6" fill="#7f8c8d"/>
+    
+    <!-- Gear teeth -->
+    <rect x="13" y="0" width="4" height="6" fill="#95a5a6"/>
+    <rect x="13" y="24" width="4" height="6" fill="#95a5a6"/>
+    <rect x="0" y="13" width="6" height="4" fill="#95a5a6"/>
+    <rect x="24" y="13" width="6" height="4" fill="#95a5a6"/>
+    
+    <!-- Diagonal teeth -->
+    <rect x="21" y="4" width="4" height="4" fill="#95a5a6" transform="rotate(45 23 6)"/>
+    <rect x="5" y="4" width="4" height="4" fill="#95a5a6" transform="rotate(-45 7 6)"/>
+    <rect x="21" y="22" width="4" height="4" fill="#95a5a6" transform="rotate(-45 23 24)"/>
+    <rect x="5" y="22" width="4" height="4" fill="#95a5a6" transform="rotate(45 7 24)"/>
+  </g>
+  
+  <!-- Clock (Fast Service) -->
+  <g transform="translate(300, 50)">
+    <circle cx="15" cy="15" r="12" fill="#e74c3c"/>
+    <circle cx="15" cy="15" r="10" fill="white"/>
+    
+    <!-- Clock hands -->
+    <line x1="15" y1="15" x2="15" y2="8" stroke="#2c3e50" stroke-width="2" stroke-linecap="round"/>
+    <line x1="15" y1="15" x2="20" y2="15" stroke="#2c3e50" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="15" cy="15" r="1.5" fill="#2c3e50"/>
+    
+    <!-- Clock numbers -->
+    <text x="15" y="7" text-anchor="middle" fill="#2c3e50" font-family="Arial" font-size="6" font-weight="bold">12</text>
+    <text x="23" y="17" text-anchor="middle" fill="#2c3e50" font-family="Arial" font-size="6" font-weight="bold">3</text>
+    <text x="15" y="26" text-anchor="middle" fill="#2c3e50" font-family="Arial" font-size="6" font-weight="bold">6</text>
+    <text x="7" y="17" text-anchor="middle" fill="#2c3e50" font-family="Arial" font-size="6" font-weight="bold">9</text>
+  </g>
+  
+  <!-- Stars (Quality) -->
+  <g transform="translate(50, 120)">
+    <polygon points="10,2 12,8 18,8 13,12 15,18 10,14 5,18 7,12 2,8 8,8" fill="#f1c40f"/>
+    <polygon points="30,2 32,8 38,8 33,12 35,18 30,14 25,18 27,12 22,8 28,8" fill="#f1c40f"/>
+    <polygon points="50,2 52,8 58,8 53,12 55,18 50,14 45,18 47,12 42,8 48,8" fill="#f1c40f"/>
+    <polygon points="70,2 72,8 78,8 73,12 75,18 70,14 65,18 67,12 62,8 68,8" fill="#f1c40f"/>
+    <polygon points="90,2 92,8 98,8 93,12 95,18 90,14 85,18 87,12 82,8 88,8" fill="#f1c40f"/>
+  </g>
+  
+  <!-- Thumbs up -->
+  <g transform="translate(250, 120)">
+    <rect x="10" y="15" width="8" height="15" rx="2" fill="#3498db"/>
+    <rect x="5" y="10" width="10" height="8" rx="3" fill="#3498db"/>
+    <rect x="18" y="18" width="3" height="12" rx="1" fill="#2980b9"/>
+    <rect x="22" y="18" width="3" height="12" rx="1" fill="#2980b9"/>
+    <rect x="26" y="18" width="3" height="12" rx="1" fill="#2980b9"/>
+  </g>
+  
+  <!-- Floating elements -->
+  <circle cx="30" cy="30" r="2" fill="#f39c12" opacity="0.6"/>
+  <circle cx="370" cy="40" r="3" fill="#e74c3c" opacity="0.5"/>
+  <circle cx="350" cy="160" r="2" fill="#3498db" opacity="0.7"/>
+  <circle cx="60" cy="170" r="3" fill="#9b59b6" opacity="0.4"/>
+  
+  <!-- Text -->
+  <text x="200" y="180" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Por Que Escolher a Sudtec?</text>
+</svg>

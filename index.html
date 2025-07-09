@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="assets/css/animations.css">
     <link rel="stylesheet" href="assets/css/preloader.css">
     <link rel="stylesheet" href="assets/css/text-animations.css">
+    <link rel="stylesheet" href="assets/css/mobile-fixes.css">
     <!-- Font Awesome para ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
@@ -49,6 +50,12 @@
                 <h1>Sudtec</h1>
             </div>
             <nav class="nav">
+                <div class="nav-header">
+                    <div class="nav-logo">Sudtec</div>
+                    <div class="close-menu">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#servicos">Serviços</a></li>
@@ -200,7 +207,43 @@
         </div>
     </section>
 
-    <!-- Seção Por que nos escolher -->
+ 
+    <!-- Seção Sobre Nós -->
+    <section id="sobre" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="section-header">
+                        <h2 class="outline-text">Sobre a Sudtec</h2>
+                        <p>Sua melhor opção em <span class="highlight">assistência técnica</span></p>
+                    </div>
+                    <p>A Sudtec nasceu da paixão por tecnologia e da vontade de oferecer soluções de qualidade para problemas técnicos. Com mais de <span class="gradient-text">15 anos de experiência</span> no mercado, nos especializamos em consertos de notebooks e desktops, sempre utilizando peças originais e técnicas avançadas de reparo.</p>
+                    <p>Nossa missão é proporcionar um atendimento personalizado, entendendo as necessidades específicas de cada cliente e oferecendo a melhor solução técnica com <span class="float-text">transparência</span> e honestidade.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number shadow-pulse">15+</span>
+                            <span class="stat-text">Anos de <span class="highlight">Experiência</span></span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number shadow-pulse">5000+</span>
+                            <span class="stat-text">Clientes <span class="highlight">Satisfeitos</span></span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number shadow-pulse">15000+</span>
+                            <span class="stat-text">Reparos <span class="highlight">Realizados</span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <picture>
+                        <img src="assets/images/equipe.webp" alt="Equipe Sudtec trabalhando em computadores" class="responsive-img">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Seção Por que nos escolher -->
     <section class="why-choose-us">
         <div class="container">
             <div class="section-header">
@@ -237,43 +280,21 @@
                     <p>Todos os nossos serviços possuem garantia, para sua tranquilidade e segurança.</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Seção Sobre Nós -->
-    <section id="sobre" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <div class="section-header">
-                        <h2 class="outline-text">Sobre a Sudtec</h2>
-                        <p>Sua melhor opção em <span class="highlight">assistência técnica</span></p>
-                    </div>
-                    <p>A Sudtec nasceu da paixão por tecnologia e da vontade de oferecer soluções de qualidade para problemas técnicos. Com mais de <span class="gradient-text">15 anos de experiência</span> no mercado, nos especializamos em consertos de notebooks e desktops, sempre utilizando peças originais e técnicas avançadas de reparo.</p>
-                    <p>Nossa missão é proporcionar um atendimento personalizado, entendendo as necessidades específicas de cada cliente e oferecendo a melhor solução técnica com <span class="float-text">transparência</span> e honestidade.</p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <span class="stat-number shadow-pulse">15+</span>
-                            <span class="stat-text">Anos de <span class="highlight">Experiência</span></span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number shadow-pulse">5000+</span>
-                            <span class="stat-text">Clientes <span class="highlight">Satisfeitos</span></span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number shadow-pulse">15000+</span>
-                            <span class="stat-text">Reparos <span class="highlight">Realizados</span></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <picture>
-                        <img src="assets/images/equipe.webp" alt="Equipe Sudtec trabalhando em computadores" class="responsive-img">
-                    </picture>
-                </div>
+            <!-- Indicadores de slide para mobile -->
+            <div class="slide-indicators">
+                <span class="indicator active"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+            </div>
+            <!-- Navegação do slide para mobile -->
+            <div class="slide-nav">
+                <button class="prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="next"><i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
     </section>
+
 
     <!-- Seção Monte seu PC -->
     <section id="monte-pc" class="monte-pc">
@@ -305,7 +326,7 @@
                                 <li>Placa de vídeo integrada</li>
                             </ul>
                             <a href="#contato" class="btn btn-secondary">Solicitar Orçamento</a>
-                        </div>
+                       </div>
                     </div>
                     <div class="pc-category">
                         <div class="category-image">
@@ -785,7 +806,9 @@
     </a>
     </div><!-- Fim da site-wrapper -->
 
-    <!-- JavaScript -->
+    <!-- Scripts -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/header-fix.js"></script>
+    <script src="assets/js/why-choose-us-slider.js"></script>
 </body>
 </html>

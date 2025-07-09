@@ -63,11 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Menu Mobile
     if (mobileMenuIcon) {
-        // Criar o ícone de fechar menu
-        const closeMenu = document.createElement('div');
-        closeMenu.classList.add('close-menu');
-        closeMenu.innerHTML = '<i class="fas fa-times"></i>';
-        nav.appendChild(closeMenu);
+        const closeMenu = document.querySelector('.close-menu');
         
         // Abrir menu mobile
         mobileMenuIcon.addEventListener('click', function() {
@@ -76,10 +72,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         // Fechar menu mobile
-        closeMenu.addEventListener('click', function() {
-            nav.classList.remove('active');
-            document.body.style.overflow = ''; // Restaurar rolagem
-        });
+        if (closeMenu) {
+            closeMenu.addEventListener('click', function() {
+                nav.classList.remove('active');
+                document.body.style.overflow = ''; // Restaurar rolagem
+            });
+        }
         
         // Fechar menu ao clicar em um link
         const navLinks = nav.querySelectorAll('a');
@@ -88,6 +86,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 nav.classList.remove('active');
                 document.body.style.overflow = ''; // Restaurar rolagem
             });
+        });
+        
+        // Fechar menu ao clicar fora dele
+        document.addEventListener('click', function(event) {
+            if (nav.classList.contains('active') && 
+                !nav.contains(event.target) && 
+                !mobileMenuIcon.contains(event.target)) {
+                nav.classList.remove('active');
+                document.body.style.overflow = '';
+            }
         });
     }
     

@@ -1,0 +1,1112 @@
+/* Mobile Fixes CSS - Correções para melhorar a experiência mobile */
+
+/* Ajustes gerais para mobile */
+@media screen and (max-width: 768px) {
+    /* Ajuste no body para compensar o header fixo */
+    body {
+        /* padding-top será definido dinamicamente pelo JavaScript */
+        margin-top: 0;
+    }
+    
+    /* Ajuste para garantir que o conteúdo não seja cortado */
+    html, body {
+        overflow-x: hidden;
+    }
+    
+    /* Ajustes específicos para telas muito pequenas */
+    @media screen and (max-width: 480px) {
+        .slide .hero-buttons {
+            justify-content: center;
+        }
+        
+        .slide .hero-buttons .btn {
+            min-width: 120px;
+            max-width: 45%;
+            padding: 7px 10px;
+            font-size: 0.8rem;
+            border-radius: 5px;
+        }
+    }
+    
+    @media screen and (max-width: 375px) {
+        .logo h1 {
+            font-size: 1.5rem; /* Reduzir tamanho da fonte do logo em telas muito pequenas */
+        }
+    }
+    
+    /* Ajustes para telas extremamente pequenas */
+    @media screen and (max-width: 320px) {
+        
+        .logo h1 {
+            font-size: 1.3rem; /* Reduzir ainda mais o tamanho da fonte do logo */
+        }
+        
+        .header {
+            padding: 20px 0; /* Reduzir padding vertical do header */
+            min-height: 60px; /* Reduzir altura mínima do header */
+        }
+        
+        .slide .hero-image {
+            max-width: 280px; /* Reduzir ligeiramente a largura máxima */
+            margin: 0 auto;
+        }
+        
+        .slide .hero-image img {
+            max-width: 100%;
+            height: auto;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+        
+        /* Ajustes específicos para botões em telas extremamente pequenas */
+        .slide .hero-buttons {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .slide .hero-buttons .btn {
+            min-width: 120px;
+            max-width: 70%;
+            margin-bottom: 5px;
+            padding: 6px 8px;
+            font-size: 0.75rem;
+            border-radius: 4px;
+        }
+    }
+    
+    /* Ajustes no header e menu */
+    .header {
+        padding: 25px 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999; /* Aumentado para garantir que fique acima de todos os elementos */
+        background-color: #fff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        height: auto;
+        min-height: 70px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        padding: 0 15px;
+    }
+    
+    .logo h1 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+    
+    /* Melhorias no menu mobile */
+    .nav {
+        width: 80%; /* Aumentar largura do menu */
+        max-width: 300px;
+        background-color: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        z-index: 1001;
+        padding-top: 0;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--primary-color);
+    }
+    
+    .close-menu {
+        position: relative;
+        top: auto;
+        right: auto;
+        font-size: 1.8rem;
+        color: var(--primary-color);
+        cursor: pointer;
+    }
+    
+    .nav ul {
+        padding: 20px 0;
+    }
+    
+    .nav ul li {
+        margin: 15px 0;
+        text-align: center;
+    }
+    
+    .nav ul li a {
+        font-size: 1.2rem;
+        display: block;
+        padding: 10px 0;
+        transition: all 0.3s ease;
+    }
+    
+    .nav ul li a:hover,
+    .nav ul li a.active {
+        color: var(--primary-color);
+        transform: translateX(5px);
+    }
+    
+    .mobile-menu-icon {
+        font-size: 1.8rem;
+        color: var(--primary-color);
+        cursor: pointer;
+    }
+    
+    /* Ajustes no carrossel de hero - versão mais compacta para mobile */
+    .hero-carousel {
+        min-height: 400px;
+        height: calc(100vh - 80px);
+        max-height: 500px;
+        padding-top: 0; /* Removido padding-top pois já temos no body */
+        padding-bottom: 40px;
+        overflow: hidden;
+    }
+    
+    /* Simplificar carrossel em telas pequenas */
+    @media screen and (max-width: 480px) {
+        .hero-carousel {
+            margin-top: 0;
+            min-height: 350px;
+        }
+        
+        /* Mostrar apenas o primeiro slide */
+        .hero-carousel .slide:not(:first-child) {
+            display: none;
+        }
+        
+        /* Ocultar indicadores e controles do carrossel */
+        .carousel-indicators, .nav-btn.prev, .nav-btn.next {
+            display: none;
+        }
+        
+        .slide .hero-image {
+            max-width: 80%;
+            margin: 0 auto;
+        }
+    }
+    
+    /* Ajustes adicionais para o carrossel em telas pequenas */
+    @media screen and (max-width: 375px) {
+        .hero-carousel {
+            margin-top: 0; /* Removido ajuste negativo pois o padding do body foi reduzido */
+            min-height: 300px;
+        }
+        
+        .slide .hero-image {
+            max-width: 290px; /* Ajustar largura máxima para telas pequenas */
+            margin: 0 auto;
+            display: block !important;
+            visibility: visible !important;
+        }
+    }
+    
+    @media screen and (max-width: 320px) {
+        .hero-carousel {
+            margin-top: 0; /* Removido ajuste negativo pois o padding do body foi reduzido */
+            min-height: 280px;
+        }
+    }
+    
+    .slide {
+        height: auto;
+        min-height: auto;
+    }
+    
+    /* Garantir que as imagens sejam exibidas em todos os slides, não apenas no ativo */
+    .slide .hero-image,
+    .slide .hero-image img {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    /* Apenas ocultar o slide inteiro, não seus elementos internos */
+    .slide:not(.active) {
+        min-height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .slide .container {
+        padding: 20px;
+        flex-direction: column;
+    }
+    
+    .slide .hero-content {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin-bottom: 30px;
+        max-width: 100%;
+    }
+    
+    .slide .hero-content h1,
+    .slide .hero-content h2 {
+        font-size: 2rem !important;
+        text-align: center;
+        margin-bottom: 15px;
+        line-height: 1.3;
+    }
+    
+    .slide .hero-content p {
+        font-size: 1rem;
+        text-align: center;
+        margin-bottom: 20px;
+        line-height: 1.4;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    
+    .slide .hero-buttons {
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 10px;
+    }
+    
+    .slide .hero-buttons .btn {
+        width: auto;
+        min-width: 130px;
+        max-width: 45%;
+        margin: 0;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        text-align: center;
+        border-radius: 6px;
+    }
+    
+    /* Em telas muito pequenas, mostrar apenas o botão principal */
+    @media screen and (max-width: 375px) {
+        .slide .hero-buttons .btn-secondary {
+            display: none;
+        }
+    }
+    
+    .slide .hero-image {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        display: block !important; /* Garantir que a imagem seja exibida */
+        visibility: visible !important; /* Garantir que a imagem seja visível */
+    }
+    
+    .slide .hero-image img {
+        max-width: 100%;
+        height: auto;
+        display: block !important; /* Garantir que a imagem seja exibida */
+        visibility: visible !important; /* Garantir que a imagem seja visível */
+        opacity: 1 !important; /* Garantir que a imagem não esteja transparente */
+    }
+    
+    .nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        opacity: 0.7;
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-btn:hover {
+        opacity: 1;
+    }
+    
+    .nav-btn.prev {
+        left: 10px;
+    }
+    
+    .nav-btn.next {
+        right: 10px;
+    }
+    
+    .carousel-indicators {
+        bottom: 10px;
+    }
+    
+    .carousel-indicators button {
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+    }
+    
+    /* Ajustes nas seções */
+    section {
+        padding: 30px 0;
+        scroll-margin-top: 80px; /* Ajuste para o scroll com header fixo */
+        position: relative;
+    }
+    
+    /* Imagens para mobile no início de cada seção */
+    .mobile-section-image {
+        display: block;
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        margin: 0 auto 20px auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }    
+    /* Imagem específica para seção why-choose-us */
+    .why-choose-us::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 450px;
+        background-image: url('../images/Tecnologia\ \(1\).webp');
+        border-radius: 0 0 20px 20px; /* apenas inferior */
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-bottom: 20px;
+    }
+    
+    /* Imagem específica para seção empresarial */
+    .business-services::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 150px;
+        background-image: url('../images/mobile-empresarial.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-bottom: 20px;
+    }
+    
+    /* Imagem específica para seção depoimentos */
+    .testimonials::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 150px;
+        background-image: url('../images/mobile-depoimentos.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-bottom: 20px;
+    }
+    
+    /* Imagem específica para seção contato */
+    .contact::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 150px;
+        background-image: url('../images/mobile-contato.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-bottom: 20px;
+    }
+    
+    /* Ocultar cards específicos no mobile */
+    .service-card:nth-child(2), /* Conserto de Desktops */
+    .service-card:nth-child(5), /* Upgrade de Memória */
+    .service-card:nth-child(6)  /* Remoção de Vírus */ {
+        display: none;
+    }
+    
+    /* Ocultar seção 'Por que montar seu PC conosco?' no mobile */
+    .pc-builder-features {
+        display: none;
+    }
+    
+    /* Ocultar seção de depoimentos no mobile */
+    .testimonials {
+        display: none;
+    }
+    
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .section-header p {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+    
+    /* Ajustes nos serviços - versão mais compacta para mobile */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .service-card {
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .service-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .service-card h3 {
+        font-size: 1.2rem;
+        margin: 10px 0;
+    }
+    
+    .service-card p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        margin-bottom: 0;
+    }
+    
+    .service-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: var(--light-bg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+    }
+    
+    .service-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+        color: var(--heading-color);
+    }
+    
+    .service-card p {
+        color: var(--text-color);
+        margin-bottom: 15px;
+    }
+    
+    /* Ajustes na seção Sobre - versão mais compacta para mobile */
+    .about-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .about-image {
+        order: -1; /* Coloca a imagem antes do texto */
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .about-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .about-text {
+        text-align: center;
+    }
+    
+    .about-text h2 {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+    
+    .about-text p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        margin-bottom: 15px;
+    }
+    
+    /* Limitar o número de parágrafos visíveis */
+    .about-text p:nth-child(n+4) {
+        display: none;
+    }
+    
+    /* Ocultar a imagem em telas muito pequenas */
+    @media screen and (max-width: 375px) {
+        .about-image {
+            display: none;
+        }
+    }
+    
+    .about-stats {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+    }
+    
+    .stat {
+        padding: 15px;
+        background-color: var(--light-bg);
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+    }
+    
+    .stat:hover {
+        transform: translateY(-3px);
+    }
+    
+    .stat h3 {
+        font-size: 1.8rem;
+        color: var(--primary-color);
+        margin-bottom: 5px;
+    }
+    
+    .stat p {
+        font-size: 0.9rem;
+        color: var(--text-color);
+        margin: 0;
+    }
+    
+    /* Ajustes na seção Monte seu PC - versão mais compacta para mobile */
+    .pc-categories {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .pc-category {
+        padding: 15px;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background-color: #fff;
+        position: relative;
+        overflow: hidden;
+        border-top: 3px solid var(--primary-color); /* Adicionando borda superior colorida */
+    }
+    
+    /* Ocultar a terceira opção de PC (PC Gamer Premium) em telas pequenas */
+    @media screen and (max-width: 480px) {
+        .pc-categories .pc-category:nth-child(3) {
+            display: none;
+        }
+    }
+    
+    .pc-category:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+    
+    .pc-category::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: var(--primary-color);
+    }
+    
+    .category-image {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .category-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .category-info {
+        text-align: center;
+    }
+    
+    .category-info p {
+        color: var(--text-color); /* Garantindo que os parágrafos descritivos sejam visíveis */
+        margin-bottom: 15px;
+        font-weight: 500; /* Tornando o texto um pouco mais forte para melhor legibilidade */
+    }
+    
+    .category-info h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        color: var(--primary-color); /* Alterando para a cor primária para melhor visibilidade */
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Aumentando a intensidade da sombra */
+        font-weight: 700; /* Tornando a fonte mais forte */
+    }
+    
+    /* Melhorando a animação shadow-pulse para os títulos na seção Monte seu PC */
+    .pc-category .shadow-pulse {
+        text-shadow: 0 0 8px rgba(0, 102, 204, 0.7); /* Sombra mais intensa */
+        animation: shadow-pulse-pc 2s infinite;
+        color: var(--primary-color); /* Garantindo que o título tenha a cor primária no mobile */
+    }
+    
+    @keyframes shadow-pulse-pc {
+        0% {
+            text-shadow: 0 0 8px rgba(0, 102, 204, 0.7);
+        }
+        50% {
+            text-shadow: 0 0 15px rgba(0, 102, 204, 1);
+        }
+        100% {
+            text-shadow: 0 0 8px rgba(0, 102, 204, 0.7);
+        }
+    }
+    
+    /* Ajustando cores de texto para o fundo branco no mobile */
+    .pc-category p {
+        color: var(--text-color); /* Cor de texto padrão para parágrafos */
+    }
+    
+    .pc-category ul li:before {
+        color: var(--primary-color); /* Cor do ícone de verificação */
+    }
+    
+    .category-info ul li {
+        color: var(--text-color); /* Garantindo que o texto da lista seja visível */
+    }
+    
+    .category-info .price {
+        font-size: 1.8rem;
+        color: var(--primary-color);
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    
+    .category-features {
+        margin-bottom: 25px;
+    }
+    
+    .category-features ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .category-features ul li {
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--text-color); /* Adicionando cor de texto para garantir visibilidade */
+    }
+    
+    .category-features ul li:last-child {
+        border-bottom: none;
+    }
+    
+    .category-features ul li i {
+        color: var(--primary-color);
+    }
+    
+    .category-info .btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+    }
+    
+    /* Melhorando a visibilidade do botão na seção Monte seu PC */
+    .pc-category .btn-secondary {
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        font-weight: 600;
+        box-shadow: 0 4px 8px rgba(0, 102, 204, 0.3);
+    }
+    
+    .pc-category .btn-secondary:hover {
+        background-color: var(--secondary-color);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0, 102, 204, 0.4);
+    }
+    
+    /* Ajustes na seção Empresarial */
+    .business-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .business-features {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Ajustes nos depoimentos - versão mais compacta para mobile */
+    .testimonial {
+        min-width: 280px;
+        padding: 15px;
+    }
+    
+    /* Ocultar alguns depoimentos em telas pequenas */
+    @media screen and (max-width: 480px) {
+        .testimonials-slider .testimonial:nth-child(n+4) {
+            display: none;
+        }
+    }
+    }
+    
+    /* Ajustes na seção de contato - versão mais compacta para mobile */
+    .contact-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .contact-info {
+        margin-bottom: 0;
+        padding: 15px;
+        background-color: var(--light-bg);
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .contact-info h3 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+    
+    .contact-info-item {
+        margin-bottom: 12px;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .contact-info-item i {
+        font-size: 1.1rem;
+        color: var(--primary-color);
+        margin-top: 3px;
+    }
+    
+    .contact-form {
+        padding: 15px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    /* Simplificar formulário em telas muito pequenas */
+    @media screen and (max-width: 480px) {
+        .form-group.half {
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+    
+    .contact-form h3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: var(--text-color);
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+    }
+    
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.1);
+        outline: none;
+    }
+    
+    .form-group textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+    
+    .contact-form .btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+    
+    .success-message,
+    .error-message {
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .success-message {
+        background-color: rgba(40, 167, 69, 0.1);
+        border: 1px solid rgba(40, 167, 69, 0.2);
+        color: #28a745;
+    }
+    
+    .error-message {
+        background-color: rgba(220, 53, 69, 0.1);
+        border: 1px solid rgba(220, 53, 69, 0.2);
+        color: #dc3545;
+    }
+    
+    /* Ajustes no FAQ */
+    .faq-item {
+        margin-bottom: 15px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        background-color: #fff;
+    }
+    
+    .faq-question {
+        padding: 15px;
+        background-color: var(--light-bg);
+        position: relative;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .faq-question:hover {
+        background-color: rgba(var(--primary-rgb), 0.05);
+    }
+    
+    .faq-question h3 {
+        font-size: 1.1rem;
+        padding-right: 30px;
+        margin: 0;
+        color: var(--heading-color);
+    }
+    
+    .faq-question::after {
+        content: '\f107';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--primary-color);
+        transition: transform 0.3s ease;
+    }
+    
+    .faq-question.active::after {
+        transform: translateY(-50%) rotate(180deg);
+    }
+    
+    .faq-answer {
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        background-color: #fff;
+    }
+    
+    .faq-item.active .faq-answer {
+        padding: 15px;
+        max-height: 500px;
+    }
+    
+    .faq-answer p {
+        margin: 0;
+        color: var(--text-color);
+        line-height: 1.6;
+    }
+    
+    /* Ajustes no footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+/* Ajustes específicos para telas muito pequenas */
+@media screen and (max-width: 480px) {
+    .slide .hero-content h1,
+    .slide .hero-content h2 {
+        font-size: 1.6rem !important;
+    }
+    
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .service-icon,
+    .feature-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+    
+    .service-card h3,
+    .feature h3 {
+        font-size: 1.1rem;
+    }
+    
+    /* Transformando a seção Why Choose Us em um slide para mobile */
+        .why-choose-us .container {
+    overflow: hidden;
+    position: relative;
+    padding: 0 15px; /* Controlar o espaçamento no container */
+    box-sizing: border-box;
+}
+.why-choose-us .features {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none; /* Firefox */
+            margin: 0 -15px; /* Compensa o padding do container */
+            padding: 20px 0;
+        }
+        
+        .why-choose-us .features::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
+        }
+        
+        .why-choose-us .feature {
+    flex: 0 0 100%;
+    width: 100%;
+    scroll-snap-align: center;
+    box-sizing: border-box;
+    padding: 20px 30px; /* Espaçamento interno do card */
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+        
+        /* Indicadores de slide */
+        .why-choose-us .slide-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .why-choose-us .slide-indicators .indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgba(0, 102, 204, 0.3);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .why-choose-us .slide-indicators .indicator.active {
+            background-color: var(--primary-color);
+            width: 25px;
+            border-radius: 10px;
+        }
+        
+        /* Animação suave para indicar que há mais conteúdo */
+        .why-choose-us .features::after {
+            content: "";
+            flex: 0 0 20px;
+        }
+        
+        /* Adicionando setas de navegação */
+        .why-choose-us .slide-nav {
+            position: relative;
+            margin-top: 15px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .why-choose-us .slide-nav button {
+            position: absolute;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+            z-index: 2;
+        }
+        
+        .why-choose-us .slide-nav button:hover {
+            opacity: 1;
+        }
+        
+        .why-choose-us .slide-nav .prev {
+            left: 5%;
+        }
+        
+        .why-choose-us .slide-nav .next {
+            right: 5%;
+        }
+    
+    .btn {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+    
+    /* Ajustes adicionais para botões do hero em telas pequenas */
+    .slide .hero-buttons {
+        justify-content: center;
+    }
+    
+    .slide .hero-buttons .btn {
+        min-width: 120px;
+        max-width: 45%;
+        padding: 8px 12px;
+        font-size: 0.85rem;
+        border-radius: 5px;
+    }
+    
+    /* Ajuste no botão de WhatsApp */
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        bottom: 20px !important;
+        right: 20px !important;
+    }
+    
+    /* Ajustes no formulário */
+    .form-group label {
+        font-size: 0.9rem;
+    }
+    
+    input, select, textarea {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
