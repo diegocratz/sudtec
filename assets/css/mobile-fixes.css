@@ -931,11 +931,31 @@
         color: var(--text-color);
         line-height: 1.6;
     }
+
+/* Ajustes para tablets */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+    
+    .footer-links-section {
+        margin-top: 20px;
+    }
+}
     
     /* Ajustes no footer */
     .footer-content {
-        grid-template-columns: 1fr;
-        gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+    
+    .footer-links-section {
+        margin-top: 15px;
+    }
+    
+    .footer-links-section h3 {
+        font-size: 1rem;
     }
     
     .footer-bottom {
@@ -946,6 +966,11 @@
 
 /* Ajustes específicos para telas muito pequenas */
 @media screen and (max-width: 480px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
     .slide .hero-content h1,
     .slide .hero-content h2 {
         font-size: 1.6rem !important;
