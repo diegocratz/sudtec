@@ -149,6 +149,12 @@ section {
     transition: var(--transition);
 }
 
+/* Ocultar botão de fechar menu e logo do nav em desktop */
+.close-menu,
+.nav-logo {
+    display: none !important;
+}
+
 .header.scrolled {
     padding: 10px 0;
     background-color: rgba(255, 255, 255, 0.95);
@@ -1343,6 +1349,7 @@ section {
     }
 
     .close-menu {
+        display: block;
         position: absolute;
         top: 20px;
         right: 20px;

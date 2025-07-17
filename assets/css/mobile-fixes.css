@@ -124,12 +124,14 @@
     }
     
     .nav-logo {
+        display: block;
         font-size: 1.5rem;
         font-weight: 700;
         color: var(--primary-color);
     }
     
     .close-menu {
+        display: block;
         position: relative;
         top: auto;
         right: auto;
